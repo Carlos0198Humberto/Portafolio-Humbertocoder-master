@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./assets/img/button.ico" type="image/png" sizes="16x16">
+    <!--este comando es para agregarle icono a la pestaña-->
+    
+    <title>Humbertocoder</title>
+</head>
+
+
+<body>
+
+    <form id="themeForm">
+        <button type="button" id="themeButton">
+            <span id="themeIcon">🌞</span>
+        </button>
+    </form>
+    
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <label for="" class="nav__logo">
+                <a href=""><img src="./assets/img/button.ico" alt=""></a>
+            </label>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Inicio</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Sobre mí</a></li>
+                    <li class="nav__item"><a href="#casos-exito" class="nav__link">Casos de Éxito</a></li>
+                    
+                    <li class="nav__item"><a href="/indexEnglish.html" class="nav__link">Traducir</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Sección de traducción -->
+    <section class="about section" id="Traductor">
+        <div class="Traductoores">
+            <div class="row text-center" id="google_translate_element"></div>
+            <script type="text/javascript">
+                // Función de traducción
+                function traducirPagina() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'es'
+                    }, 'google_translate_element');
+                }
+            </script>
+            <script type="text/javascript"
+                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                </script>
+        </div>
+    </section>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Hola,<br>Soy<span class="home__title-color"> Humberto</span><br> Desarrollador
+                    <br> Front end
+                </h1>
+                <a href="#contact" class="button">Contacto</a>
+                <a href="/testimonio.html" class="button">Testimonios</a>
+            </div>
+
+            <div class="home__social">
+                <a href="https://www.linkedin.com/in/carlos-humberto-chavarr%C3%ADa-aparicio-b30407214/" target="_blank"
+                    class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Carlos0198Humberto" target="_blank" class="home__social-icon"><i
+                        class='bx bxl-github'></i></a>
+            </div>
+
+            <div class="home__img">
+                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <mask id="mask0" mask-type="alpha">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                        <image class="home__blob-img" x="10" y="70" href="assets/img/perfil.png" />
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+
+        <!--===== ABOUTME =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="./assets/img/about.png" alt="">
+                </div>
+                <div>
+                    <h2 class="about__subtitle">Soy Humberto</h2>
+                    <p>Un apasionado del aprendizaje en temas de informática. apasionado por la programación front-end
+                        con HTML, CSS y Javascrip y frameworks como Bootstrap entre otros. Soy comunicativo y disfruto
+                        colaborar en equipo para encontrar soluciones creativas. ¡Emocionado por seguir aprendiendo y
+                        creciendo en el campo de la programación! <br></p>
+                    <br>
+                    <p><b><i>Creo que el aprendizaje es un viaje sin fin, y cada línea de código escrita es una
+                                oportunidad para aprender algo nuevo y emocionante en el fascinante mundo del desarrollo
+                            </i></b></p>
+                </div>
+            </div>
+            </div>
+            <div class="btn">
+                <a href="./assets/pdf/Perfil Profesional Carlos Chavarría.pdf"
+                    download="Perfil profesional Carlos Chavarría">
+                    <img class="imagen" src="./assets/img/dowload.png" alt="Icono de descarga">
+                </a>
+            </div>
+        </section>
+       
+
+
+        <!--"#skills"-->
+        <section class="about section " id="casos-exito">
+            
+            <h2 class="section-title">Casos de Éxito</h2>
+            <div class="card__container swiper">
+                <div class="card__content">
+                    <div class="swiper-wrapper">
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.27.22.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Congreso Latinoamericano de Informática y Comunicaciones
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.27.39.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Especialización en Python Django, Aplicaciones Web, Arquitectura y seguridad
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.27.57.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Rally Latinoamericano de innovación
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.28.22.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Habilidades en la Nube
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.28.39.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Seguridad en Azure
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.28.59.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Front end Developer
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.29.14.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Ingles A1
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.29.27.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Javascrip Engine (V8)
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.29.42.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Algoritmos y diagramas de flujo
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.29.56.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Configuración de entorno de desarrollo MACOS
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.30.12.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Ciberseguridad
+                                </p>
+                            </div>
+                        </article>
+                        
+                    </div>
+
+                    
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next">
+                    <i class="ri-arrow-right-s-line"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="ri-arrow-left-s-line"></i>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="about section " id="casos-exito"> <!-- Cambié el ID para ser más específico -->
+            <!-- Contenido de la sección... -->
+
+            <!-- Contenedor del botón "Credly" -->
+
+        
+                <div class="credly-btn-container">
+                    <a href="https://www.credly.com/users/carlos-humberto-chavarria-aparicio" class="BtnRedireccion">Credly</a>
+                </div>
+            
+            
+            
+        </section>
+
+         <!--===== CONTACT =====-->
+        
+         <section class="contact section" id="contact">
+            <h2 class="section-title">Contacto</h2>
+
+            <div class="contact__container bd-grid">
+              <form action="https://formsubmit.co/cchavarriaaparicio@gmail.com" method="post">
+                 <input type="text" placeholder="Name" id="Name" class="contact__input" name="name">
+                 <input type="email" placeholder="Email" id="Email" class="contact__input" name="email">
+                 <textarea name="message" cols="30" rows="10" class="contact__input"></textarea>
+                 <input type="submit" value="Enviar" id="Enviar" class="contact__button button">
+             </form>
+            </div>
+        </section>
+
+       
+    
+       
+
+        
+        <!-- Nueva sección para el foro -->
+    <section class="forum section" id="forum">
+        <h2 class="section-title">Publicaciones</h2>
+        <div class="forum__container bd-grid">
+            <form id="forumForm">
+                <input type="text" placeholder="Tu nombre" id="userName" class="forum__input" required>
+                <textarea placeholder="Tu tip" id="userTip" class="forum__input" required></textarea>
+                <button type="submit" class="forum__button button">Publicar</button>
+            </form>
+            <div id="postsContainer" class="posts__container">
+                <!-- Las publicaciones aparecerán aquí -->
+            </div>
+        </div>
+    </section>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Humberto</p>
+         
+            <div class="footer__social">
+                <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+            </div>
+            <p class="footer__copy">&#169;    "Creando conexiones visuales que inspiran y cautivan: mi mundo es el desarrollo front end"</p>
+        </footer>
+
+   
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>
