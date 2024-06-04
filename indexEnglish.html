@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./assets/img/button.ico" type="image/png" sizes="16x16">
+    <!--este comando es para agregarle icono a la pestaña-->
+
+    <title>Humbertocoder</title>
+</head>
+
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <label for="" class="nav__logo">
+                <a href=""><img src="./assets/img/button.ico" alt=""></a>
+            </label>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">about</a></li>
+                    <li class="nav__item"><a href="#casos-exito" class="nav__link">success-stories</a></li>
+                    <li class="nav__item"><a href="/index.html" class="nav__link">Translate</a></li>
+                    
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Sección de traducción -->
+    <section class="about section" id="Traductor">
+        <div class="Traductoores">
+            <div class="row text-center" id="google_translate_element"></div>
+            <script type="text/javascript">
+                // Función de traducción
+                function traducirPagina() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'es'
+                    }, 'google_translate_element');
+                }
+            </script>
+            <script type="text/javascript"
+                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                </script>
+        </div>
+    </section>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Hello,<br>I'm<span class="home__title-color"> Humberto</span><br> Developer
+                    <br> Front end
+                </h1>
+                <a href="#" class="button">Contact</a>
+            </div>
+
+            <div class="home__social">
+                <a href="https://www.linkedin.com/in/carlos-humberto-chavarr%C3%ADa-aparicio-b30407214/" target="_blank"
+                    class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Carlos0198Humberto" target="_blank" class="home__social-icon"><i
+                        class='bx bxl-github'></i></a>
+            </div>
+
+            <div class="home__img">
+                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <mask id="mask0" mask-type="alpha">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                        <image class="home__blob-img" x="10" y="70" href="assets/img/perfil.png" />
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+
+        <!--===== ABOUTME =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title">About me</h2>
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="./assets/img/about.png" alt="">
+                </div>
+                <div>
+                    <h2 class="about__subtitle">I'm Humberto</h2>
+                    <p>Passionate about learning computer science topics. passionate about front-end programming
+                        with HTML, CSS and Javascript and frameworks such as Bootstrap among others. I am communicative and enjoy
+                        Collaborate as a team to find creative solutions. Excited to continue learning and
+                        growing in the field of programming! <br></p>
+                    <br>
+                    <p><b><i>I believe that learning is an endless journey, and every line of code written is a
+                        opportunity to learn something new and exciting in the fascinating world of development
+                            </i></b></p>
+                </div>
+            </div>
+            </div>
+            <div class="btn">
+                <a href="./assets/pdf/Perfil Profesional Carlos Chavarría.pdf"
+                    download="Perfil profesional Carlos Chavarría">
+                    <img class="imagen" src="./assets/img/dowload.png" alt="Icono de descarga">
+                </a>
+            </div>
+        </section>
+
+
+        <!--"#skills"-->
+        <section class="about section " id="casos-exito">
+            
+            <h2 class="section-title">Success stories</h2>
+            <div class="card__container swiper">
+                <div class="card__content">
+                    <div class="swiper-wrapper">
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.27.22.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Latin American Congress of Informatics and Communications
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.27.39.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Specialization in Python Django, Web Applications, Architecture and security
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.27.57.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                   Latin American Innovation Rally
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.28.22.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Cloud Skills
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.28.39.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Security in Azure
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.28.59.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Front end Developer
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.29.14.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    English A1
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.29.27.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Javascript Engine (V8)
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.29.42.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Algorithms and flowcharts
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.29.56.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    MACOS development environment configuration
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="./Certificaciones/Captura de pantalla 2024-04-25 a la(s) 18.30.12.png"
+                                    alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+
+                            <div class="card__data">
+                                <p class="card__description">
+                                    Cybersecurity
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next">
+                    <i class="ri-arrow-right-s-line"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="ri-arrow-left-s-line"></i>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="about section " id="casos-exito"> <!-- Cambié el ID para ser más específico -->
+            <!-- Contenido de la sección... -->
+
+            <!-- Contenedor del botón "Credly" -->
+            <div class="credly-btn-container">
+                <a href="https://www.credly.com/users/carlos-humberto-chavarria-aparicio"
+                    class="BtnRedireccion">Credly</a>
+            </div>
+        </section>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Humberto</p>
+         
+            <div class="footer__social">
+                <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+            </div>
+            <p class="footer__copy">&#169;    Creating visual connections that inspire and captivate: my world is front end development</p>
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>
