@@ -1,3 +1,7 @@
+@media only screen and (max-width: 600px) {
+  /* Estilos para pantallas pequeñas */
+}
+
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
@@ -845,4 +849,16 @@ body.dark-theme {
 
 .post p {
   margin: 0;
+}
+.delete__button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete__button:hover {
+  background-color: darkred;
 }

@@ -86,69 +86,77 @@ let swiperCards = new Swiper(".card__content", {
     },
   },
 });
+// Función para mostrar las publicaciones guardadas en el almacenamiento local
+function mostrarPublicacionesGuardadas() {
+  // Obtener las publicaciones guardadas del almacenamiento local
+  const storedPosts = JSON.parse(localStorage.getItem("posts")) || [];
 
-document.addEventListener("DOMContentLoaded", () => {
-  const forumForm = document.getElementById("forumForm");
-  const userName = document.getElementById("userName");
-  const userTip = document.getElementById("userTip");
+  // Obtener el contenedor de publicaciones
   const postsContainer = document.getElementById("postsContainer");
 
-  forumForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+  // Limpiar el contenedor de publicaciones antes de mostrar las publicaciones guardadas
+  postsContainer.innerHTML = "";
 
-    const name = userName.value.trim();
-    const tip = userTip.value.trim();
-
-    if (name && tip) {
-      const post = document.createElement("div");
-      post.classList.add("post");
-
-      const postName = document.createElement("p");
-      postName.classList.add("post__name");
-      postName.textContent = name;
-
-      const postMessage = document.createElement("p");
-      postMessage.classList.add("post__message");
-      postMessage.textContent = tip;
-
+  // Mostrar las publicaciones guardadas
+  storedPosts.forEach((post, index) => {
+      const postElement = document.createElement("div");
+      postElement.classList.add("post");
+      postElement.innerHTML = `<p><strong>${post.userName}:</strong> ${post.userTip}</p>`;
+      
+      // Crear botón de eliminar
       const deleteButton = document.createElement("button");
-      deleteButton.classList.add("post__delete-button");
-      deleteButton.textContent = "Eliminar";
-      deleteButton.addEventListener("click", () => {
-        postsContainer.removeChild(post);
-      });
-
-      post.appendChild(postName);
-      post.appendChild(postMessage);
-      post.appendChild(deleteButton);
-
-      postsContainer.appendChild(post);
-
-      // Limpiar formulario
-      userName.value = "";
-      userTip.value = "";
-    }
+      deleteButton.innerText = "Eliminar";
+      deleteButton.classList.add("delete__button");
+      // Añadir evento de clic para eliminar publicación
+      deleteButton.addEventListener("click", () => eliminarPublicacion(index));
+      
+      postElement.appendChild(deleteButton);
+      
+      postsContainer.appendChild(postElement);
   });
+}
+
+// Función para manejar el envío del formulario
+document.getElementById("forumForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+  // Obtener los valores de los campos de entrada
+  const userName = document.getElementById("userName").value;
+  const userTip = document.getElementById("userTip").value;
+
+  // Crear un objeto para representar la publicación
+  const post = { userName, userTip };
+
+  // Obtener las publicaciones guardadas del almacenamiento local
+  const storedPosts = JSON.parse(localStorage.getItem("posts")) || [];
+
+  // Agregar la nueva publicación a las publicaciones guardadas
+  storedPosts.push(post);
+
+  // Guardar las publicaciones actualizadas en el almacenamiento local
+  localStorage.setItem("posts", JSON.stringify(storedPosts));
+
+  // Mostrar las publicaciones guardadas (incluyendo la nueva publicación)
+  mostrarPublicacionesGuardadas();
+
+  // Limpiar los campos del formulario
+  this.reset();
 });
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  const themeButton = document.getElementById("themeButton");
-  const themeIcon = document.getElementById("themeIcon");
-  const body = document.body;
+// Función para eliminar una publicación
+function eliminarPublicacion(index) {
+  // Obtener las publicaciones guardadas del almacenamiento local
+  const storedPosts = JSON.parse(localStorage.getItem("posts")) || [];
 
-  themeButton.addEventListener("click", () => {
-    if (body.classList.contains("light-theme")) {
-      body.classList.remove("light-theme");
-      body.classList.add("dark-theme");
-      themeIcon.textContent = "🌜"; // Icono para el tema oscuro
-    } else {
-      body.classList.remove("dark-theme");
-      body.classList.add("light-theme");
-      themeIcon.textContent = "🌞"; // Icono para el tema claro
-    }
-  });
+  // Eliminar la publicación en el índice especificado
+  storedPosts.splice(index, 1);
 
-  // Inicializar con el tema claro
-  body.classList.add("light-theme");
-});
+  // Guardar las publicaciones actualizadas en el almacenamiento local
+  localStorage.setItem("posts", JSON.stringify(storedPosts));
 
+  // Mostrar las publicaciones actualizadas
+  mostrarPublicacionesGuardadas();
+}
+
+// Mostrar las publicaciones guardadas al cargar la página
+mostrarPublicacionesGuardadas();
