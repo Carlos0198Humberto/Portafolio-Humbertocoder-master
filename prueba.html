@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos -->
+    <meta charset="utf-8">
+    <meta name="author" content="Jane Doe">
+    <meta name="description" content="Portafolio de desarrollo web de Jane Doe">
+    <meta name="keywords" content="HTML, CSS, JavaScript, React">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Titulo -->
+    <title>Testimonio</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link href="assets/css/testimonio.css" rel="stylesheet">
+    <style>
+        .form-container {
+            margin-top: 2rem;
+        }
+        .testimonio-imagen {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .btn-morado {
+            background-color: #6f42c1;
+            color: white;
+        }
+        .btn-morado:hover {
+            background-color: #59369e;
+        }
+    </style>
+</head>
+<body>
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonios seccion-clara">
+        <h2 class="seccion-titulo">Testimonios</h2>
+        <!-- Formulario -->
+        <div class="form-container container">
+            <form id="testimonioForm">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cargo" class="form-label">Cargo/Empresa</label>
+                    <input type="text" class="form-control" id="cargo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="detalle" class="form-label">Detalle</label>
+                    <textarea class="form-control" id="detalle" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="foto" class="form-label">Foto</label>
+                    <input class="form-control" type="file" id="foto" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn btn-morado">Enviar Testimonio</button>
+                <button type="button" class="btn btn-danger" id="deleteButton">Eliminar Información</button>
+            </form>
+        </div>
+        <!-- Carrusel -->
+        <div id="testimonios-carrusel" class="carousel carousel-dark slide mt-5" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselInner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <img class="testimonio-imagen rounded-circle" src="/assets/img/work2.jpg" alt="Foto de Gino">
+                        <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+                        <div class="testimonio-info">
+                            <p class="cliente">Gino</p>
+                            <p class="cargo">Gerente de proyectos en DesarrolloWeb</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <img class="testimonio-imagen rounded-circle" src="imagenes/cliente2.svg" alt="Foto de Nora">
+                        <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+                        <div class="testimonio-info">
+                            <p class="cliente">Nora</p>
+                            <p class="cargo">Gerente de DiseñaMiPáginaWeb</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <img class="testimonio-imagen rounded-circle" src="imagenes/cliente3.svg" alt="Foto de Leonardo">
+                        <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+                        <div class="testimonio-info">
+                            <p class="cliente">Leonardo</p>
+                            <p class="cargo">Director de AprendeAProgramar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+        <a href="/index.html" class="btn btn-morado">Inicio</a>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cargar testimonios desde localStorage
+            loadTestimonials();
+
+            document.getElementById('testimonioForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const nombre = document.getElementById('nombre').value;
+                const cargo = document.getElementById('cargo').value;
+                const detalle = document.getElementById('detalle').value;
+                const foto = document.getElementById('foto').files[0];
+                const reader = new FileReader();
+
+                reader.onloadend = function() {
+                    const newTestimonial = {
+                        nombre: nombre,
+                        cargo: cargo,
+                        detalle: detalle,
+                        foto: reader.result
+                    };
+                    saveTestimonial(newTestimonial);
+                    addTestimonialToCarousel(newTestimonial);
+                    clearForm();
+                };
+
+                if (foto) {
+                    reader.readAsDataURL(foto);
+                }
+            });
+
+            document.getElementById('deleteButton').addEventListener('click', function() {
+                clearForm();
+            });
+        });
+
+        function saveTestimonial(testimonial) {
+            let testimonials = JSON.parse(localStorage.getItem('testimonios')) || [];
+            testimonials.push(testimonial);
+            localStorage.setItem('testimonios', JSON.stringify(testimonials));
+        }
+
+        function loadTestimonials() {
+            const testimonials = JSON.parse(localStorage.getItem('testimonios')) || [];
+            testimonials.forEach(addTestimonialToCarousel);
+        }
+
+        function addTestimonialToCarousel(testimonial) {
+            const carouselInner = document.getElementById('carouselInner');
+            
+            const newItem = document.createElement('div');
+            newItem.classList.add('carousel-item');
+            
+            newItem.innerHTML = `
+                <div class="container">
+                    <img class="testimonio-imagen rounded-circle" src="${testimonial.foto}" alt="Foto de ${testimonial.nombre}">
+                    <p class="testimonio-texto">${testimonial.detalle}</p>
+                    <div class="testimonio-info">
+                        <p class="cliente">${testimonial.nombre}</p>
+                        <p class="cargo">${testimonial.cargo}</p>
+                    </div>
+                </div>
+            `;
+            
+            carouselInner.appendChild(newItem);
+
+            // Activar el nuevo ítem si es el primero añadido
+            if (carouselInner.children.length === 1) {
+                newItem.classList.add('active');
+            }
+        }
+
+        function clearForm() {
+            document.getElementById('testimonioForm').reset();
+        }
+    </script>
+</body>
+</html>

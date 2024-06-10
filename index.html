@@ -20,12 +20,13 @@
 
 
 <body>
+    
 
-    <form id="themeForm">
+   <form id="themeForm">
         <button type="button" id="themeButton">
             <span id="themeIcon">🌞</span>
         </button>
-    </form>
+    </form> 
     
     <!--===== HEADER =====-->
     <header class="l-header">
@@ -77,6 +78,7 @@
                 </h1>
                 <a href="#contact" class="button">Contacto</a>
                 <a href="/testimonio.html" class="button">Testimonios</a>
+
             </div>
 
             <div class="home__social">
@@ -317,7 +319,11 @@
                 <div class="credly-btn-container">
                     <a href="https://www.credly.com/users/carlos-humberto-chavarria-aparicio" class="BtnRedireccion">Credly</a>
                 </div>
-            
+
+                <div class="proyectos-btn-container">
+                    <a href="/Proyectos.html" class="BtnRedireccionn">Proyectos</a>
+                </div>
+                
             
             
         </section>
@@ -343,19 +349,19 @@
 
         
         <!-- Nueva sección para el foro -->
-    <section class="forum section" id="forum">
-        <h2 class="section-title">Publicaciones</h2>
-        <div class="forum__container bd-grid">
-            <form id="forumForm">
-                <input type="text" placeholder="Tu nombre" id="userName" class="forum__input" required>
-                <textarea placeholder="Tu tip" id="userTip" class="forum__input" required></textarea>
-                <button type="submit" class="forum__button button">Publicar</button>
-            </form>
-            <div id="postsContainer" class="posts__container">
-                <!-- Las publicaciones aparecerán aquí -->
+        <section class="forum section" id="forum">
+            <h2 class="section-title">Publicaciones</h2>
+            <div class="forum__container bd-grid">
+                <form id="forumForm">
+                    <input type="text" placeholder="Tu nombre" id="userName" class="forum__input" required>
+                    <textarea placeholder="comparte una idea" id="userTip" class="forum__input" required></textarea>
+                    <button type="submit" class="forum__button button">Publicar</button>
+                </form>
+                <div id="postsContainer" class="posts__container">
+                    <!-- Las publicaciones aparecerán aquí -->
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
         <!--===== FOOTER =====-->
         <footer class="footer">
@@ -379,6 +385,7 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+        <script src="./assets/js/app.js"></script>
 </body>
 
 </html>

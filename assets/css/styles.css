@@ -669,8 +669,8 @@ img {
 
 .credly-btn-container {
   position: absolute;
-  bottom: -582px; /* Distancia desde el borde inferior */
-  right: 90px; /* Distancia desde el borde derecho */
+  bottom: -540px; /* Distancia desde el borde inferior */
+  right: 150px; /* Distancia desde el borde derecho */
 }
 
 /* Estilos para el botón "Crxswedly" */
@@ -704,25 +704,7 @@ img {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== CONTACT =====*/
-.contact__input {
-  width: 100%;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: 1.5px solid var(--second-color);
-  outline: none;
-  margin-bottom: var(--mb-4);
-}
-.contact__button {
-  display: block;
-  border: none;
-  outline: none;
-  font-size: var(--normal-font-size);
-  cursor: pointer;
-  margin-left: auto;
-}
+
 
 /* ===== CONTACT =====*/
 .contact__input {
@@ -753,24 +735,27 @@ img {
 
 .forum__input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--second-color);
+  outline: none;
+  margin-bottom: var(--mb-4);
 }
 
 .forum__button {
-  padding: 10px 20px;
-  background-color: #483d8b;
-  color: white;
+  display: block;
   border: none;
-  border-radius: 4px;
+  outline: none;
+  font-size: var(--normal-font-size);
   cursor: pointer;
+  margin-left: auto;
 }
 
 .posts__container {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 100px;
 }
 
 .post {
@@ -826,4 +811,38 @@ body.dark-theme {
 
 #themeIcon {
   font-size: 32px; /* Aumentamos el tamaño del icono */
+}
+
+
+.proyectos-btn-container {
+  position: absolute;
+  bottom: -1190px; /* Distancia desde el borde inferior */
+  right: 150px; /* Distancia desde el borde derecho */
+}
+.BtnRedireccionn {
+  background-color: #483d8b;
+  border: none;
+  color: #fff;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  font-family: sans-serif;
+  
+}
+
+.post {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.post h3 {
+  margin: 0 0 5px;
+}
+
+.post p {
+  margin: 0;
 }
