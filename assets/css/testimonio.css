@@ -150,11 +150,11 @@ section {
   }
   
   .testimonios .carousel {
-    max-width: 800px;
+    max-width: 1200px;
   }
   
   .carousel-item {
-    height: 500px;
+    height: 450px;
   }
   
   .carousel-item .container {
@@ -173,8 +173,8 @@ section {
   }
   
   .testimonio-texto {
-    max-width: 70%;
-    font-size: 20px;
+    max-width: 90%;
+    font-size: 15px;
     text-align: center;
     font-family: 'Share Tech Mono', monospace;
   }
@@ -205,6 +205,7 @@ section {
     font-weight: var(--font-semi);
     border-radius: 0.5rem;
     transition: 0.3s;
+    margin-top: 2rem;
   }
   .button:hover {
     box-shadow: 0px 10px 36px rgba(114, 19, 62, 0.15);
@@ -244,3 +245,8 @@ section {
       max-width: 600px;
     }
   }
+
+  .inicio-button {
+    margin-top: 4rem; /* Ajusta este valor según tus necesidades */
+  }
+  
