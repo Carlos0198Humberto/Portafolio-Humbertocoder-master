@@ -160,3 +160,36 @@ function eliminarPublicacion(index) {
 
 // Mostrar las publicaciones guardadas al cargar la página
 mostrarPublicacionesGuardadas();
+
+// Función para cambiar el tema
+const changeTheme = () => {
+  const body = document.body;
+  const themeIcon = document.getElementById("themeIcon");
+
+  if (body.classList.contains("light-theme")) {
+    body.classList.remove("light-theme");
+    body.classList.add("dark-theme");
+    themeIcon.textContent = "🌞"; // Icono de sol
+  } else {
+    body.classList.remove("dark-theme");
+    body.classList.add("light-theme");
+    themeIcon.textContent = "🌙"; // Icono de luna
+  }
+};
+
+// Agregar evento de click al botón de tema
+const themeButton = document.getElementById("themeButton");
+themeButton.addEventListener("click", changeTheme);
+
+// Inicializar tema
+document.addEventListener("DOMContentLoaded", () => {
+  const body = document.body;
+  const themeIcon = document.getElementById("themeIcon");
+
+  // Verificar el tema actual y ajustar el icono
+  if (body.classList.contains("light-theme")) {
+    themeIcon.textContent = "🌙"; // Icono de luna
+  } else {
+    themeIcon.textContent = "🌞"; // Icono de sol
+  }
+});

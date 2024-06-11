@@ -673,7 +673,7 @@ img {
 
 .credly-btn-container {
   position: absolute;
-  bottom: -540px; /* Distancia desde el borde inferior */
+  bottom: -460px; /* Distancia desde el borde inferior */
   right: 150px; /* Distancia desde el borde derecho */
 }
 
@@ -820,7 +820,7 @@ body.dark-theme {
 
 .proyectos-btn-container {
   position: absolute;
-  bottom: -1190px; /* Distancia desde el borde inferior */
+  bottom: -1050px; /* Distancia desde el borde inferior */
   right: 150px; /* Distancia desde el borde derecho */
 }
 .BtnRedireccionn {
